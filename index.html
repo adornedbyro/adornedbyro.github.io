@@ -37,7 +37,6 @@ body {font-family: 'Oswald', sans-serif;}
 .tg .tg-1scj{background-color:#616161;color:#ffffff; width:49%}
 .tg .tg-kjwm{background-color:#000000; width:2%}
 @media screen and (max-width: 767px) .tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
-
 .accordion {
   background-color: white;
   color: black;
@@ -49,18 +48,15 @@ body {font-family: 'Oswald', sans-serif;}
   outline: none;
   transition: 0.4s;
 }
-
 .active, .accordion:hover {
   background-color: #FFF; 
 }
-
 .panel {
   padding: 0 18px;
   display: none;
   background-color: black;
   overflow: hidden;
 }
-
 </style>
 <body class="w3-black">
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -329,8 +325,8 @@ I attach tooth gems & charms using a medical grade dental bond. This semi-perman
  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="FAQ">
     <h2 class="w3-text-white">FAQ</h2>
     <hr style="width:200px" class="w3-opacity">
-    <button class="accordion"><H5>TOOTH GEMS & CHARMS</H5></button>
-<div class="panel">
+    <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align"><H5>TOOTH GEMS & CHARMS</H5></button>
+<div id="Demo1" class="w3-container w3-hide">
 <H5>How long will the tooth jewel last?</H5>
 <p>Anywhere from 6 months up to 24 months for the Swarvoski Crystals, Brilliance Crystals and Shaped Crystals and 6 to 12 Months for the Real Gold Charms & Real Diamonds (Due to the extra Weight on these Specific Charms). With extra care, they may last even longer.
     </p><BR>
@@ -349,10 +345,9 @@ I attach tooth gems & charms using a medical grade dental bond. This semi-perman
      <H5>Can I still have my teeth cleaned by my dentist/hygienist?</H5>
 <p>Yes, you can and should still have your teeth cleaned by a professional. Tooth jewelry will not cause a problem for the hygienist cleaning your teeth. The area underneath the jewel is sealed like a filling and will not let in any bacteria. The hygienist can easily polish on top and around the jewel with a soft point.
     </p>
- 
-    </div><BR><BR>
-     <button class="accordion"><H5>CUSTOM GRILLS</H5></button>
-<div class="panel">
+    </div>
+    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-black w3-left-align"><H5>CUSTOM GRILLS</H5></button>
+<div id="Demo2" class="w3-container w3-hide">
 <H5>What are the different types of precious metals you offer?</H5>
 <p>We offer 10KT, 14KT 18KT & 22KT Yellow, White, or Rose Gold and Platium.
     </p><BR>
@@ -372,7 +367,6 @@ Get creative, schedule an appointment, and get a quote!
 <br><br>
 We do not offer rush service. As each customer grill should be handled with care and attention. We do not rush quality.
     </p>
- 
     </div>
  <!-- End FAQ Section -->
   <!-- Contact Section -->
@@ -408,20 +402,19 @@ Close to the F, M and J trains. (Delancey/ Essex St.)
 <!-- END PAGE CONTENT -->
 </div>
 <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-black", "w3-white");
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-white", "w3-black");
+  }
 }
 </script>
+
 </body>
 </html>
