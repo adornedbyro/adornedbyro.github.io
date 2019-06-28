@@ -302,14 +302,20 @@ img {vertical-align: middle;}
   ]
 }
 </script>
-	<script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org/", 
   "@type": "Product", 
   "name": "Tooth Gems",
   "image": "http://www.charmedbyro.com/charmedbyro.github.io/images/gems.png",
   "description": "Tooth Gems & Charms by Tooth Kandy applied by New York's Premier Tooth Fairy, Charmed by Ro",
-  "brand": "Tooth Kandy"
+  "brand": "Tooth Kandy",
+  "offers": {
+    "@type": "Offer",
+    "url": "",
+    "priceCurrency": "USD",
+    "price": "100"
+  }
 }
 </script>
 	<script type="application/ld+json">
@@ -433,9 +439,9 @@ I attach tooth gems & charms using a medical grade dental bond. This semi-perman
 <!-- End About Section -->
   <!-- Products Section -->
   <div class="w3-padding-64 w3-content" id="products" itemscope itemtype="https://schema.org/Product">
-    <h2 class="w3-text-white" id="Products">Products</h2>
+    <h2 class="w3-text-white" id="Products" itemprop="https://schema.org/name">Products</h2>
     <hr style="width:200px" class="w3-opacity">
-<p class="w3-padding-16 w3-text-white">If you do not see something you like below, feel free to email me for special requests.</p> 
+<p class="w3-padding-16 w3-text-white" itemprop="https://schema.org/offers">If you do not see something you like below, feel free to email me for special requests.</p> 
     <!-- Grid for products -->
     <div class="w3-row-padding" style="margin:0 -16px">
 <img src="charmedbyro.github.io/images/gems.png" itemprop="image" alt="Swarovski Tooth Gems Available in NYC" width="100%" class="product" style='max-width: 400px'/></img>
